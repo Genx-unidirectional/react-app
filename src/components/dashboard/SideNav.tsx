@@ -1,9 +1,11 @@
 import BrandLogo from "../Brand-logo";
+import { ModeToggle } from "../ModeToggle";
 function SideNav() {
   return (
-    <div>
-      <div className="w-full h-10 dark:bg-black dark:text-white  text-black bg-white">
+    <div className="">
+      <div className="w-full p-2 h-10 bg- flex justify-between bg-background text-foreground ">
         <BrandLogo />
+        <ModeToggle />
       </div>
     </div>
   );
