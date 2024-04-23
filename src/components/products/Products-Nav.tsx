@@ -6,7 +6,7 @@ import Link from "next/link";
 function ProductsNav() {
   const pathName = usePathname();
   return (
-    <nav className="border-b flex justify-between border-slate-400">
+    <nav className="border-b md:max-w-4xl mx-auto flex justify-between border-slate-400">
       <BrandLogo />
       {pathName === "/products" ? (
         <Link href={"/products/cart"}>
