@@ -1,3 +1,4 @@
+"use client";
 import React, { useMemo, useReducer, createContext } from "react";
 
 export type CartItemType = {
@@ -100,7 +101,7 @@ function useCartMaker(initCartState: CartStateType) {
   return { dispatch, cart, totalPrice, totalProducts, Reducer_Actions };
 }
 
-type CartContextState = ReturnType<typeof useCartMaker>;
+export type CartContextState = ReturnType<typeof useCartMaker>;
 const initContextState: CartContextState = {
   dispatch: () => {},
   totalPrice: "",
@@ -109,7 +110,7 @@ const initContextState: CartContextState = {
   Reducer_Actions: REDUCER_ACTION_TYPE,
 };
 //context
-const CartContext = createContext<CartContextState>(initContextState);
+export const CartContext = createContext<CartContextState>(initContextState);
 //context provider
 export const CartProvider = ({ children }: { children: React.ReactNode }) => {
   return (
