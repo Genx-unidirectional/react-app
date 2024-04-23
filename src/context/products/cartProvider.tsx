@@ -94,7 +94,7 @@ function useCartMaker(initCartState: CartStateType) {
   );
   const cart = state.cart.sort((a, b) => {
     let aItem = Number(a.sku.slice(-4));
-    let bItem = Number(a.sku.slice(-4));
+    let bItem = Number(b.sku.slice(-4));
     return aItem - bItem;
   });
 
