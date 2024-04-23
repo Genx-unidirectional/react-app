@@ -1,4 +1,4 @@
-import { Dispatch } from "react";
+import { Dispatch, memo } from "react";
 import {
   ReducerAction,
   UseReducerActionType,
@@ -56,4 +56,20 @@ function Product({ inCart, dispatch, Reducer_Actions, product }: Props) {
     </div>
   );
 }
-export default Product;
+
+function arePropsEqual(
+  { product: prevProduct, inCart: prevInCart }: Props,
+  { product: newProduct, inCart: newInCart }: Props
+) {
+  return (
+    Object.keys(prevProduct).every((key) => {
+      return (
+        prevProduct[key as keyof ProductType] ===
+        newProduct[key as keyof ProductType]
+      );
+    }) && prevInCart === newInCart
+  );
+}
+
+const MemoisedProduct = memo<typeof Product>(Product, arePropsEqual);
+export default MemoisedProduct;
