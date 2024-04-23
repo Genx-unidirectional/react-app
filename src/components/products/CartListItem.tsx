@@ -5,7 +5,7 @@ import {
   ProductType,
 } from "@/context/products";
 import { Trash2 } from "lucide-react";
-import { Dispatch, useState } from "react";
+import { Dispatch, memo, useState } from "react";
 type Props = {
   dispatch: Dispatch<ReducerAction>;
   Reducer_Actions: UseReducerActionType;
@@ -80,7 +80,7 @@ function CartListItem({ dispatch, Reducer_Actions, item, totalPrice }: Props) {
       </div>
       <div className="flex flex-col justify-evenly items-end  gap-16">
         <h3 className="font-medium">{totalItemPrice}</h3>
-        <button  
+        <button
           onClick={() => {
             dispatch({ type: Reducer_Actions.REMOVE, payload: { ...item } });
           }}
@@ -91,4 +91,17 @@ function CartListItem({ dispatch, Reducer_Actions, item, totalPrice }: Props) {
     </div>
   );
 }
-export default CartListItem;
+
+function arePropsEqual({ item: prevItem }: Props, { item: newItem }: Props) {
+  return Object.keys(prevItem).every((key) => {
+    return (
+      prevItem[key as keyof CartItemType] === newItem[key as keyof CartItemType]
+    );
+  });
+}
+
+const MemoisedCartListItem = memo<typeof CartListItem>(
+  CartListItem,
+  arePropsEqual
+);
+export default MemoisedCartListItem;
