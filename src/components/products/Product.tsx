@@ -10,25 +10,38 @@ type Props = {
   Reducer_Actions: UseReducerActionType;
   product: ProductType;
 };
+import { BookCheck } from "lucide-react";
 
 function Product({ inCart, dispatch, Reducer_Actions, product }: Props) {
   return (
-    <div className="flex flex-col hover:scale-[1.012] rounded-lg mb-4 shadow-sm shadow-black p-2 w-5/6 md:w-full gap-2  mx-auto   ">
-      <div className=" w-full overflow-hidden">
-        <img
-          className="mx-auto  rounded-lg"
-          src={`/images/${product.sku}.jpg`}
-          alt={product.name}
-        />
+    <div className="flex flex-col relative hover:scale-[1.012] rounded-lg mb-4 shadow-lg shadow-slate-500 p-2 w-5/6 md:w-full gap-2 justify-between mx-auto   ">
+      <div className="flex flex-col gap-2">
+        <div className=" w-full overflow-hidden">
+          <img
+            className="mx-auto w-full rounded-lg"
+            src={`/images/${product.sku}.jpg`}
+            alt={product.name}
+          />
+        </div>
+        <div className="flex justify-between items-baseline">
+          <div className=" flex flex-col">
+            <h3 className="text-2xl  font-medium">{product.name}</h3>
+
+            <p>
+              {new Intl.NumberFormat("en-US", {
+                style: "currency",
+                currency: "USD",
+              }).format(product.price)}
+            </p>
+          </div>
+          {inCart ? (
+            <p className="text-green-500 text-nowrap md:text-sm font-bold flex ">
+              <BookCheck />
+              In Cart
+            </p>
+          ) : null}
+        </div>
       </div>
-      <h3 className="text-2xl md:text-3xl font-medium">{product.name}</h3>
-      {inCart ? <p>In Cart</p> : null}
-      <p>
-        {new Intl.NumberFormat("en-US", {
-          style: "currency",
-          currency: "USD",
-        }).format(product.price)}
-      </p>
       <button
         onClick={() =>
           dispatch({
@@ -36,7 +49,7 @@ function Product({ inCart, dispatch, Reducer_Actions, product }: Props) {
             payload: { ...product, quantity: 1 },
           })
         }
-        className="bg-black text-white p-2 rounded-lg"
+        className="bg-black text-white p-2 rounded-lg  "
       >
         Add To Cart
       </button>
