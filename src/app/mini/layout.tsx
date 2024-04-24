@@ -8,7 +8,7 @@ function layout({ children }: { children: React.ReactNode }) {
         <MiniNavbar />
       </header>
       <div className="flex">
-        <div className="md:block hidden border-l border-slate-500 bg-black flex-none w-56 lg:w-72">
+        <div className="md:block hidden border-slate-500 bg-black flex-none w-56 lg:w-72 mt-[56.8px] border-r ">
           <MiniSidebar />
         </div>
 
