@@ -2,7 +2,8 @@
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
-import { SquareGanttChart } from "lucide-react";
+import { MINI_PROJECTS_ARR } from "@/config/mini";
+import { ChevronRight, SquareGanttChart } from "lucide-react";
 import {
   Sheet,
   SheetClose,
@@ -15,19 +16,16 @@ import {
 } from "@/components/ui/sheet";
 import BrandLogo from "../Brand-logo";
 import { cn } from "@/lib/utils";
+import { useState } from "react";
+import Link from "next/link";
 
 export function MiniNavbar() {
-  console.log(window.document.body.clientWidth);
   return (
     <div className="flex justify-between border-b border-slate-500 shadow-sm shadow-slate-800 p-2">
       <BrandLogo />
       <Sheet>
         <SheetTrigger>
-          <SquareGanttChart
-            className={cn("w-8 h-8", {
-              hidden: window.document.body.clientWidth === 780,
-            })}
-          />
+          <SquareGanttChart className="w-8 h-8 md:hidden" />
         </SheetTrigger>
         <SheetContent className="bg-black text-white" side={"left"}>
           <SheetHeader>
@@ -35,8 +33,20 @@ export function MiniNavbar() {
               Mini Projects
             </SheetTitle>
             <SheetDescription>
-              This action cannot be undone. This will permanently delete your
-              account and remove your data from our servers.
+              {MINI_PROJECTS_ARR.map((name, idx) => {
+                return (
+                  <SheetClose asChild>
+                    <Link
+                      key={idx}
+                      className="text-blue-500 flex text-xl"
+                      href={`#${idx.toString()}`}
+                    >
+                      {name}
+                      <ChevronRight />
+                    </Link>
+                  </SheetClose>
+                );
+              })}
             </SheetDescription>
           </SheetHeader>
         </SheetContent>
