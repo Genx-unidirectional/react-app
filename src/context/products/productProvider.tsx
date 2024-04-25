@@ -1,9 +1,9 @@
 "use client";
 // we are creating context to provide products
 
-import { createContext, useState } from "react";
+import { ReactElement, createContext, useState } from "react";
 
-type ProductType = {
+export type ProductType = {
   sku: string;
   name: string;
   price: number;
@@ -37,7 +37,11 @@ const initContextState: UseProductContextState = {
 export const ProductContext =
   createContext<UseProductContextState>(initContextState);
 
-export function ProductProvider({ children }: { children: React.ReactNode }) {
+export function ProductProvider({
+  children,
+}: {
+  children: React.ReactNode;
+}): ReactElement {
   const [products, setProducts] = useState<ProductType[]>(initState);
   return (
     <ProductContext.Provider value={{ products }}>
