@@ -35,9 +35,8 @@ export function MiniNavbar() {
             <SheetDescription>
               {MINI_PROJECTS_ARR.map((name, idx) => {
                 return (
-                  <SheetClose asChild>
+                  <SheetClose key={idx} asChild>
                     <Link
-                      key={idx}
                       className="text-blue-500 flex text-xl"
                       href={`#${idx.toString()}`}
                     >
