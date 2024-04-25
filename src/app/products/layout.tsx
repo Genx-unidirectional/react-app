@@ -11,7 +11,7 @@ function layout({ children }: { children: React.ReactNode }) {
     <ProductProvider>
       <CartProvider>
         <div className="min-h-screen md:h-screen bg-white md:overflow-hidden ">
-          <div className=" fixed z-10   bg-white top-0 mx-auto w-full ">
+          <div className=" fixed z-10   bg-white p-2 top-0 mx-auto w-full ">
             <ProductsNav />
           </div>
           <div className="flex h-screen mt-20  gap-2  mx-auto md:max-w-4xl  flex-col md:flex-row mb-12">
