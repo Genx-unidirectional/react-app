@@ -8,7 +8,7 @@ function ProductsNav() {
   const { totalProducts } = useCart();
   const pathName = usePathname();
   return (
-    <nav className="border-b p-2 md:max-w-4xl items-center mx-auto flex justify-between border-slate-400">
+    <nav className="border-b p-2  items-center mx-auto flex justify-between border-slate-400">
       <BrandLogo />
       {pathName === "/products" ? (
         <Link href={"/products/cart"} className="relative">
