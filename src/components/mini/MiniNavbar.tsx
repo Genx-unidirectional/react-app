@@ -21,7 +21,7 @@ import Link from "next/link";
 
 export function MiniNavbar() {
   return (
-    <div className="flex justify-between border-b border-slate-500 shadow-sm shadow-slate-800 p-2">
+    <div className="flex justify-between border-b  border-slate-500 shadow-sm shadow-slate-800 p-4">
       <BrandLogo />
       <Sheet>
         <SheetTrigger>
