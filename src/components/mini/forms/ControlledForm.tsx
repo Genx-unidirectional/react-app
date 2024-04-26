@@ -34,26 +34,26 @@ function ControlledForm() {
       )}
       action="./"
     >
-      <label className="text-2xl font-medium " htmlFor="1">
+      <label className="text-2xl font-medium " htmlFor="controlName">
         Name :
       </label>
       <input
         className="bg-white w-full p-2 mb-2  text-black rounded-lg"
         type="text"
         name="name"
-        id="1"
+        id="controlName"
         value={person.name}
         onChange={handleChange}
       />
 
-      <label className="text-2xl font-medium " htmlFor="2">
+      <label className="text-2xl font-medium " htmlFor="controlAge">
         age :
       </label>
       <input
         className="bg-white w-full p-2 mb-2  text-black rounded-lg"
         type="number"
         name="age"
-        id="2"
+        id="controlAge"
         value={person.age}
         onChange={handleChange}
       />
@@ -63,37 +63,37 @@ function ControlledForm() {
             <input
               type="radio"
               name="gender"
-              id="3"
+              id="controlMale"
               value="male"
               checked={person.gender === "male"}
               onChange={handleChange}
             />
-            <label className="ml-2" htmlFor="3">
+            <label className="ml-2" htmlFor="controlMale">
               Male
             </label>
           </div>
           <div>
             <input
               type="radio"
-              id="4"
+              id="controlFemale"
               name="gender"
               value="female"
               checked={person.gender === "female"}
               onChange={handleChange}
             />
-            <label className="ml-2" htmlFor="4">
+            <label className="ml-2" htmlFor="controlFemale">
               Female
             </label>
           </div>
         </div>
         <input
-          id="5"
+          id="controlCheckbox"
           type="checkbox"
           name="wantCake"
           checked={person.wantCake}
           onChange={handleChange}
         />
-        <label className="ml-2" htmlFor="5">
+        <label className="ml-2" htmlFor="controlCheckbox">
           Want Sandwich
         </label>
       </div>
