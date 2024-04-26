@@ -12,7 +12,7 @@ function MiniSidebar() {
           return (
             <Link
               key={idx}
-              className="text-blue-500 flex lg:text-xl"
+              className="text-blue-500 items-center flex lg:text-xl"
               href={`#${idx.toString()}`}
             >
               {name}

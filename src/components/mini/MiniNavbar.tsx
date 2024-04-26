@@ -40,7 +40,7 @@ export function MiniNavbar() {
                 return (
                   <SheetClose key={idx} asChild>
                     <Link
-                      className="text-blue-500 flex text-xl"
+                      className="text-blue-500 items-center flex text-xl"
                       href={`#${idx.toString()}`}
                     >
                       {name}
