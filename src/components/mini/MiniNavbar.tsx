@@ -27,7 +27,10 @@ export function MiniNavbar() {
         <SheetTrigger>
           <SquareGanttChart className="w-8 h-8 md:hidden" />
         </SheetTrigger>
-        <SheetContent className="bg-black text-white" side={"left"}>
+        <SheetContent
+          className="bg-black  overflow-y-scroll text-white"
+          side={"left"}
+        >
           <SheetHeader>
             <SheetTitle className="text-3xl font-bold text-white">
               Mini Projects
