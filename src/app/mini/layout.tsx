@@ -4,7 +4,7 @@ import MiniSidebar from "@/components/mini/MiniSidebar";
 function layout({ children }: { children: React.ReactNode }) {
   return (
     <div className="min-h-screen md:h-screen w-full">
-      <header className="fixed top-0 w-full z-10 bg-black text-white">
+      <header className="fixed top-0 w-full z-50 bg-black text-white">
         <MiniNavbar />
       </header>
       <div className="flex">

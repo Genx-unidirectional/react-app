@@ -1,3 +1,6 @@
+"use client";
+import Accordion from "@/components/mini/Accordion";
+import TicTacToe from "@/components/mini/TicTacToe";
 import ControlledForm from "@/components/mini/forms/ControlledForm";
 import ReactHookForm from "@/components/mini/forms/ReactHookForm";
 import SimpleForm from "@/components/mini/forms/SimpleForm";
@@ -8,6 +11,8 @@ function page() {
     <SimpleForm />,
     <ControlledForm />,
     <ReactHookForm />,
+    <Accordion />,
+    <TicTacToe />,
   ];
   return (
     <div className="mt-[56.8px] text-white">
