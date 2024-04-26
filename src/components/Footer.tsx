@@ -9,7 +9,10 @@ function Footer() {
       <div className="max-w-6xl mx-auto grid grid-cols-1 px-4 sm:px-6 lg:px-8 gap-8 p-4 grid-rows-4 sm:grid-rows-2 sm:grid-cols-2 lg:grid-rows-1 lg:grid-cols-4">
         <section className="">
           <h3 className="text-2xl font-medium">About Us</h3>
-          <p className="mt-8 text-slate-400"></p>
+          <p className="mt-8 text-slate-400">
+            We are the best website makers and another one is also us, we will
+            take your business potential to another level
+          </p>
         </section>
         <section className="">
           <h3 className="text-2xl font-medium">Quick Links</h3>
