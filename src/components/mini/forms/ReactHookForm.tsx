@@ -1,7 +1,8 @@
 "use client";
 import { useForm } from "react-hook-form";
-import { FormData } from "@/types/form";
+import { FormData, UserSchema } from "@/types/form";
 import FormField from "./FormField";
+import { zodResolver } from "@hookform/resolvers/zod";
 
 function Form() {
   const {
@@ -9,7 +10,7 @@ function Form() {
     handleSubmit,
     formState: { errors },
     setError,
-  } = useForm<FormData>();
+  } = useForm<FormData>({ resolver: zodResolver(UserSchema) });
 
   const onSubmit = async (data: FormData) => {
     console.log("SUCCESS", data);
@@ -20,7 +21,7 @@ function Form() {
       <div className="grid col-auto  p-2 rounded-lg text-black font-bold bg-[#d5bdaf]">
         <h1 className="text-3xl font-bold mb-4">Zod & React-Hook-Form</h1>
         <FormField
-          type="email"
+          type="text"
           placeholder="Email"
           name="email"
           register={register}

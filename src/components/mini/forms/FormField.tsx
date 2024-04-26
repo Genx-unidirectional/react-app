@@ -15,6 +15,7 @@ function FormField({
         type={type}
         placeholder={placeholder}
         {...register(name, { valueAsNumber })}
+        autoComplete="on"
       />
       {error ? (
         <span className="w-full h-2 text-xs pl-2 mb-3 text-red-500">

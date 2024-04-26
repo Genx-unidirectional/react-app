@@ -25,7 +25,7 @@ function ControlledForm() {
       setPerson({ ...person, [name]: newValue });
     }
   };
-  console.log(person);
+  // console.log(person);
   return (
     <form
       className={cn(
