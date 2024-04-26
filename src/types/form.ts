@@ -2,6 +2,30 @@ import { FieldError, UseFormRegister } from "react-hook-form";
 
 import { z, ZodType } from "zod"; // Add new import
 
+export type FormData = {
+  email: string;
+  githubUrl: string;
+  yearsOfExperience: number;
+  password: string;
+  confirmPassword: string;
+};
+
+export type FormFieldProps = {
+  type: string;
+  placeholder: string;
+  name: ValidFieldNames;
+  register: UseFormRegister<FormData>;
+  error: FieldError | undefined;
+  valueAsNumber?: boolean;
+};
+
+export type ValidFieldNames =
+  | "email"
+  | "githubUrl"
+  | "yearsOfExperience"
+  | "password"
+  | "confirmPassword";
+
 export const UserSchema: ZodType<FormData> = z
   .object({
     email: z.string().email(),
@@ -26,26 +50,3 @@ export const UserSchema: ZodType<FormData> = z
     message: "Passwords do not match",
     path: ["confirmPassword"], // path of error
   });
-export type FormData = {
-  email: string;
-  githubUrl: string;
-  yearsOfExperience: number;
-  password: string;
-  confirmPassword: string;
-};
-
-export type FormFieldProps = {
-  type: string;
-  placeholder: string;
-  name: ValidFieldNames;
-  register: UseFormRegister<FormData>;
-  error: FieldError | undefined;
-  valueAsNumber?: boolean;
-};
-
-export type ValidFieldNames =
-  | "email"
-  | "githubUrl"
-  | "yearsOfExperience"
-  | "password"
-  | "confirmPassword";
