@@ -29,9 +29,10 @@ function ContactUs() {
           Contact Us
         </h1>
         <p className="text-neutral-500 max-w-lg mx-auto my-2 text-sm text-center">
-          We&apos;re here to help with any questions about our courses,
-          programs, or events. Reach out and let us know how we can assist you
-          in your musical journey.
+          Website tailored to your business needs! feel free to contact us and
+          let us know what startup business ideal your mind is on working. Our
+          website is going to be encourage and propel to your business
+          strategies.
         </p>
         <form onSubmit={handleSubmit} className="space-y-4 mt-4">
           <input
