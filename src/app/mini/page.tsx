@@ -1,5 +1,6 @@
 "use client";
 import Accordion from "@/components/mini/Accordion";
+import SearchAutoComplete from "@/components/mini/SearchAutoComplete";
 import TicTacToe from "@/components/mini/TicTacToe";
 import ControlledForm from "@/components/mini/forms/ControlledForm";
 import ReactHookForm from "@/components/mini/forms/ReactHookForm";
@@ -13,6 +14,7 @@ function page() {
     <ReactHookForm />,
     <Accordion />,
     <TicTacToe />,
+    <SearchAutoComplete />,
   ];
   return (
     <div className="mt-[56.8px] text-white">
