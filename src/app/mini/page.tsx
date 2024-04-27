@@ -1,5 +1,6 @@
 "use client";
 import Accordion from "@/components/mini/Accordion";
+import ImageSlider from "@/components/mini/ImageSlider";
 import Model from "@/components/mini/Modal";
 import SearchAutoComplete from "@/components/mini/SearchAutoComplete";
 import Tabs from "@/components/mini/Tabs";
@@ -19,6 +20,7 @@ function page() {
     <SearchAutoComplete />,
     <Tabs />,
     <Model />,
+    <ImageSlider />,
   ];
   return (
     <div className="mt-[56.8px] text-white">
