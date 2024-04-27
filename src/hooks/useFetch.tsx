@@ -11,7 +11,9 @@ export default function UseFetch(
 ) {
   const [error, setError] = useState(false);
   const [loading, setLoading] = useState(true);
-  const [data, setData] = useState<ProductSchemaType>();
+  const [data, setData] = useState<ProductSchemaType>({
+    products: [],
+  });
 
   useEffect(() => {
     const abortControl = new AbortController();
@@ -23,15 +25,17 @@ export default function UseFetch(
           setLoading(false);
           throw new Error("Something happen while fetching");
         }
-        const data = await ProductSchema.safeParseAsync(result.json());
+        const parsedData = await result.json();
         setLoading(false);
-        return data;
+        ProductSchema.parse(parsedData);
+        setData(parsedData);
       } catch (err) {
+        setLoading(false);
+        setError(true);
         console.log(err);
       }
     };
     fetchUser();
-    setLoading(false);
     return () => {
       abortControl.abort();
     };
