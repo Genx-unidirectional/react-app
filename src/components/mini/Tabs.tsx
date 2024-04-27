@@ -31,6 +31,7 @@ function Tabs({ data = tabs }: Props) {
         {data.map((tab, idx) => {
           return (
             <button
+              key={tab.label}
               onClick={() => setIndex(idx)}
               className={cn(
                 "h-12 text-white p-2 rounded-lg font-bold text-2xl text-center",
