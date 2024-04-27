@@ -1,5 +1,6 @@
 "use client";
 import Accordion from "@/components/mini/Accordion";
+import GithubUser from "@/components/mini/GithubUser";
 import ImageSlider from "@/components/mini/ImageSlider";
 import Model from "@/components/mini/Modal";
 import SearchAutoComplete from "@/components/mini/SearchAutoComplete";
@@ -21,6 +22,7 @@ function page() {
     <Tabs />,
     <Model />,
     <ImageSlider />,
+    <GithubUser />,
   ];
   return (
     <div className="mt-[56.8px] text-white">
