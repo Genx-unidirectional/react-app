@@ -42,3 +42,9 @@ Form made with useState having object as a state and input field are controlled 
 
 - Making the state immutable
 - Also adding functionality to hop on the previous moves and then you can playing game from that instance.
+
+### 6 Search-Auto-Complete
+
+- Search Auto complete component with controlled input which onchange trigger custom useFetch function in Suggestion component
+- Suggestion component is lazy load component which showed up when query.length > 0
+- By clicking on the suggestion the text inside it get copied to input search field and that suggestion component disappears
