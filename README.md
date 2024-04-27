@@ -48,3 +48,7 @@ Form made with useState having object as a state and input field are controlled 
 - Search Auto complete component with controlled input which onchange trigger custom useFetch function in Suggestion component
 - Suggestion component is lazy load component which showed up when query.length > 0
 - By clicking on the suggestion the text inside it get copied to input search field and that suggestion component disappears
+
+### 7 Tabs
+
+- Switching tabs and based on those tabs switching contents.
