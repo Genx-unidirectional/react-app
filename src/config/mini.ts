@@ -5,4 +5,5 @@ export const MINI_PROJECTS_ARR = [
   "Accordion",
   "Tic-Tac-Toe",
   "Search-Auto-Complete",
+  "Tabs",
 ];
