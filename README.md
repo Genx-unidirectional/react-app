@@ -9,7 +9,13 @@
 
 # Mini Projects
 
-### 1 Form made with react-hook-form and zod
+### 1 Simple form
+
+### 2 Controlled form
+
+Form made with useState having object as a state and input field are controlled and have on changing function which changes properties of state object
+
+### 3 Form made with react-hook-form and zod
 
 - Steps
 
@@ -23,3 +29,16 @@
   6. import useForm from react-hook-form
   7. import zodResolver from @hookform/resolver
   8. pass the {resolver:zodResolver(userSchema)} in useForm
+
+### 4 Accordion
+
+- Accordion which open and close based on clicking it's label.
+- Is has button named openMultiple and OpenSingle based on that button Accordion behaves.
+
+### 5 Tic-Tac-Toe game
+
+- Using useState to make tic tac toe
+- Making history state which is array having history stored based on each user interaction when they click on the 9\*9 grid O or X blocks
+
+- Making the state immutable
+- Also adding functionality to hop on the previous moves and then you can playing game from that instance.
