@@ -60,3 +60,9 @@ Form made with useState having object as a state and input field are controlled 
 - two button one is cancel and another is confirm both with type = "submit" but cancel button .with formMethod = "dialog" so that when it click the text in the input field persist.
 - Also using add event listener on dialog with getBoundingClientRect() on the dialog in oder to close the model when user click outside of the model.
 - Using showModal method when click button clicked so that dialog act as a modal.
+
+### 9 Image Slider
+
+- Here we made image slider using external api for getting images
+- We made left and right arrow to manipulate image slider
+- We have created dotted button which on click navigate to respected image based on change in index by those dotted button
