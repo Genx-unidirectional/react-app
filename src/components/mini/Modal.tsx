@@ -37,7 +37,7 @@ function Model() {
         <form
           action=""
           className="w-full gap-4 flex font-medium flex-col items-start h-full"
-          method="model"
+          method="dialog"
         >
           <label htmlFor="modelInput" className="text-2xl ">
             Can you fix all things
