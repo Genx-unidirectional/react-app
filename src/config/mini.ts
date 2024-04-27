@@ -4,4 +4,5 @@ export const MINI_PROJECTS_ARR = [
   "React-Hook-Form",
   "Accordion",
   "Tic-Tac-Toe",
+  "Search-Auto-Complete",
 ];
