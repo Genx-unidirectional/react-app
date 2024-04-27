@@ -7,4 +7,5 @@ export const MINI_PROJECTS_ARR = [
   "Search-Auto-Complete",
   "Tabs",
   "Model",
+  "Image-Slider",
 ];
