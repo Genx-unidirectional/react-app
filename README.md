@@ -52,3 +52,11 @@ Form made with useState having object as a state and input field are controlled 
 ### 7 Tabs
 
 - Switching tabs and based on those tabs switching contents.
+
+### 8 Modal
+
+- Making modal using html dialog tag.
+- Putting form inside it with method="modal".
+- two button one is cancel and another is confirm both with type = "submit" but cancel button .with formMethod = "dialog" so that when it click the text in the input field persist.
+- Also using add event listener on dialog with getBoundingClientRect() on the dialog in oder to close the model when user click outside of the model.
+- Using showModal method when click button clicked so that dialog act as a modal.
