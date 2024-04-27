@@ -11,15 +11,45 @@ type Props = {
 const tabs = [
   {
     label: "Tab 1",
-    content: <div>This is content for Tab 1</div>,
+    content: (
+      <div className="w-full text-white rounded-lg p-4 gap-2 h-200 bg-black flex flex-col">
+        <p className="text-red-200 font-medium">
+          This is tab 1 which have info about telling you that it's coming for
+          you!
+        </p>
+        <button className="w-full p-1 rounded-lg text-white bg-red-500">
+          Click To Escape
+        </button>
+      </div>
+    ),
   },
   {
     label: "Tab 2",
-    content: <div>This is content for Tab 2</div>,
+    content: (
+      <div className="w-full text-white rounded-lg p-4 gap-2 h-200 bg-black flex flex-col">
+        <p className="text-yellow-200 font-medium">
+          This is tab 2 here the hallucination are on pick one take you up
+          ,another take you down.
+        </p>
+        <button className="w-full p-1 rounded-lg text-black bg-yellow-500">
+          Click For Clearance
+        </button>
+      </div>
+    ),
   },
   {
     label: "Tab 3",
-    content: <RandomComponent />,
+    content: (
+      <div className="w-full text-white rounded-lg p-4 gap-2 h-200 bg-black flex flex-col">
+        <p className="text-green-200 font-medium">
+          This is tab 3 , i think you made here safe so far now i am trying to
+          appreciate but see you later.
+        </p>
+        <button className="w-full p-1 rounded-lg text-white bg-green-500">
+          Next Adventure
+        </button>
+      </div>
+    ),
   },
 ];
 
