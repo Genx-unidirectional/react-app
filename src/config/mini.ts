@@ -8,4 +8,5 @@ export const MINI_PROJECTS_ARR = [
   "Tabs",
   "Model",
   "Image-Slider",
+  "Github-User",
 ];
