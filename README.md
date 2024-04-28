@@ -29,6 +29,7 @@ Form made with useState having object as a state and input field are controlled 
   6. import useForm from react-hook-form
   7. import zodResolver from @hookform/resolver
   8. pass the {resolver:zodResolver(userSchema)} in useForm
+  9. create route for and use zod schema for server side validation and send response as success or error json based on submitted information.
 
 ### 4 Accordion
 
