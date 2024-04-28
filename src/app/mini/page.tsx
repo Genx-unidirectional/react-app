@@ -4,6 +4,7 @@ import GithubUser from "@/components/mini/GithubUser";
 import ImageSlider from "@/components/mini/ImageSlider";
 import Model from "@/components/mini/Modal";
 import SearchAutoComplete from "@/components/mini/SearchAutoComplete";
+import StarRating from "@/components/mini/StarRating";
 import Tabs from "@/components/mini/Tabs";
 import TicTacToe from "@/components/mini/TicTacToe";
 import ControlledForm from "@/components/mini/forms/ControlledForm";
@@ -23,6 +24,7 @@ function page() {
     <Model />,
     <ImageSlider />,
     <GithubUser />,
+    <StarRating />,
   ];
   return (
     <div className="mt-[56.8px] text-white">
