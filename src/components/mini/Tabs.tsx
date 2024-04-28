@@ -42,8 +42,8 @@ const tabs = [
     content: (
       <div className="w-full text-white rounded-lg p-4 gap-2 h-200 bg-black flex flex-col">
         <p className="text-green-200 font-medium">
-          This is tab 3 , i think you made here safe so far now i am trying to
-          appreciate but see you later.
+          I think you made here safe so far now i am trying to appreciate but
+          see you later.
         </p>
         <button className="w-full p-1 rounded-lg text-white bg-green-500">
           Next Adventure
@@ -61,7 +61,7 @@ function Tabs({ data = tabs }: Props) {
         {data.map((tab, idx) => {
           return (
             <button
-              key={tab.label}
+              key={`${tab.label}taber`}
               onClick={() => setIndex(idx)}
               className={cn(
                 "h-12 text-white p-2 rounded-lg font-bold text-2xl text-center",
