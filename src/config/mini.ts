@@ -9,4 +9,5 @@ export const MINI_PROJECTS_ARR = [
   "Model",
   "Image-Slider",
   "Github-User",
+  "Star-Rating",
 ];
