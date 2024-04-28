@@ -68,7 +68,7 @@ function Footer() {
         </section>
       </div>
       <p className="text-slate-400 text-center border-t border-slate-500 w-full">
-        &copy; 2024 Music School All rights reserved
+        &copy; 2024 Gex-corpx All rights reserved.
       </p>
     </footer>
   );
