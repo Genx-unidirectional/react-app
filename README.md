@@ -66,3 +66,8 @@ Form made with useState having object as a state and input field are controlled 
 - Here we made image slider using external api for getting images
 - We made left and right arrow to manipulate image slider
 - We have created dotted button which on click navigate to respected image based on change in index by those dotted button
+
+### 10 Star rating
+
+- Here the star rating made in this code the most important thing is conditioning the number in order to set the background color for stars
+- using two useState and using short circuiting to giving background color.
