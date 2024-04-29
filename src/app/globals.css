@@ -65,7 +65,9 @@
   .bg-simple-gradient {
     background: radial-gradient( circle,#AA0082, #28061f);
   }
-
+  .bg-scrolla-gradient{
+    background :radial-gradient(#edf6f9,#ffddd2);
+  }
   .scrollbar-none {
     /* Hide scrollbar for Firefox */
     scrollbar-width: none;
@@ -74,3 +76,5 @@
       display: none;
     }
   }
+
+  
