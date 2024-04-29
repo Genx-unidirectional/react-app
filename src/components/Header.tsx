@@ -110,6 +110,9 @@ export function NavigationMenuDemo() {
               <ListItem href="/products" title="products">
                 Product cart project with context api
               </ListItem>
+              <ListItem href="/scrolla" title="scrolla">
+                Scrollable products with rate limited api data
+              </ListItem>
             </ul>
           </NavigationMenuContent>
         </NavigationMenuItem>
