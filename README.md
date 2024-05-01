@@ -1,4 +1,4 @@
-# Project Products
+# 🍬 Project Products
 
 #### build with
 
@@ -11,7 +11,9 @@
 - useReducer
 - CreateContext Api
 
-# Project Scrolla
+# 🍬 Project Scrolla with redux-toolkit
+
+#### Build With
 
 - [Next.js](https://nextjs.org)
 - [React.js](https://reactjs.org)
@@ -20,9 +22,30 @@
 - [RTK(ReduxToolKit)](https://redux-toolkit.js.org/)
 - [Shadcn](https://ui.shadcn.com/)
 
-#### Build With
+### Hooks in use
 
-# Mini Projects
+- useState
+  -useEffect
+
+### Making the reducer in redux using redux-toolkit
+
+- Making the product reducer using createSlice then extracting the actions from it and reducer
+- Adding the productSliceReducer into the rootReducer using the `combineReducers` function from redux
+- Using 'configureStore`from`@redux/toolkit`
+
+### Type Safety
+
+- Importing the `useDispatch` and `useSelector` as useAppDispatch and useAppSelector from redux-react
+- Importing `TypedUseSelectorHook` for making the type safe useSelector for getting the state out of it.
+- Setting up type for `useDispatch` and `useSelector` using below code.
+- ```
+  type AppDispatch = typeof store.dispatch;
+  type RootState = ReturnTypeOf<typeof rootReducer>;
+  const useSelector :TypedSelectorHook<RootState>=useAppSelector;
+  const useDispatch  = ()=>useDispatch<AppDispatch>();
+  ```
+
+# 🍬 Mini Projects
 
 ### 1 Simple form
 
