@@ -2,10 +2,12 @@ import { combineReducers } from "redux";
 
 // import slices
 import mainSliceReducer from "./features/task/mainSlice";
-import userSlice from "./features/users/userSlice";
+import userSliceReducer from "./features/users/userSlice";
+import productSliceReducer from "./features/products/productSlice";
 const rootReducer = combineReducers({
   cards: mainSliceReducer,
-  user: userSlice,
+  users: userSliceReducer,
+  productsArray: productSliceReducer,
 });
 
 export default rootReducer;
