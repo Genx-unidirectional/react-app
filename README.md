@@ -5,7 +5,22 @@
 - [Next.js](https://nextjs.org)
 - [React.js](https://reactjs.org)
 - [Tailwind CSS](https://tailwindcss.com)
-- [Shandcn](https://ui.shadcn.com)
+
+### Hooks and Api in use
+
+- useReducer
+- CreateContext Api
+
+# Project Scrolla
+
+- [Next.js](https://nextjs.org)
+- [React.js](https://reactjs.org)
+- [Tailwind CSS](https://tailwindcss.com)
+- [Redux-react](https://redux.js.org/)
+- [RTK(ReduxToolKit)](https://redux-toolkit.js.org/)
+- [Shadcn](https://ui.shadcn.com/)
+
+#### Build With
 
 # Mini Projects
 
