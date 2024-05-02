@@ -3,7 +3,7 @@ import { ChevronRight } from "lucide-react";
 import { MINI_PROJECTS_ARR } from "@/config/mini";
 function MiniSidebar() {
   return (
-    <div className=" p-2 fixed h-screen w-full  top-[72.8px]  text-white ">
+    <div className=" p-2 fixed h-screen  w-56 lg:w-72 top-[72.8px]   text-white ">
       <h1 className="text-2xl  lg:text-4xl  font-medium mb-4 tracking-wider">
         Mini Projects
       </h1>
