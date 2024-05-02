@@ -7,6 +7,7 @@ type Props = {
   imageUrl: string;
   category: string;
   stock: number;
+  discountPercentage: number;
   price: number;
   brand: string;
   rating: number;
@@ -19,6 +20,7 @@ export function ImageCard({
   brand,
   title,
   rating,
+  discountPercentage,
 }: Props) {
   return (
     <>
@@ -38,8 +40,17 @@ export function ImageCard({
                 }).format(price)}
               </p>
             </div>
-            <p className="text-slate-600">Only {stock} left</p>
-            <Rating num={rating} />
+            <div className="flex w-full justify-between">
+              <div className="flex flex-col">
+                <p className="text-red-400">Only {stock} left</p>
+                <Rating num={rating} />
+              </div>
+              <div>
+                <p className="text-red-500 text-lg">
+                  Discount : {discountPercentage}%
+                </p>
+              </div>
+            </div>
           </div>
         </div>
       </div>
