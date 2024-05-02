@@ -33,6 +33,8 @@ const config = {
     extend: {
       screens: {
         csm: { max: "769px" },
+        xsm: { max: "500px" },
+        fxl: { min: "1024px" },
       },
       colors: {
         border: "hsl(var(--border))",
