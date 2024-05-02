@@ -2,7 +2,7 @@ import { Dispatch, createSlice } from "@reduxjs/toolkit";
 import { Product, ImageDataSchema } from "@/types/scrolla";
 import axios from "axios";
 
-interface ProductState {
+export interface ProductState {
   products: Product[];
 }
 
@@ -16,7 +16,7 @@ const ProductSlice = createSlice({
   reducers: {
     getProductsIntoState: (state, action) => {
       state.products = [...state.products, ...action.payload];
-      console.log(state.products);
+      // console.log(state.products);
     },
   },
 });
