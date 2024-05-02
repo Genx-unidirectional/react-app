@@ -1,4 +1,3 @@
-import Image from "next/image";
 import { poppins } from "@/components/font";
 import Header from "@/components/Header";
 import Hero from "@/components/Hero";
