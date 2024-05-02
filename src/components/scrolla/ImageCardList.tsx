@@ -6,12 +6,64 @@ import axios from "axios";
 import { useDispatch, useSelector } from "@/redux/store";
 import { getProducts } from "@/redux/features/products/productSlice";
 import { progress } from "framer-motion";
+import { ProductState } from "@/redux/features/products/productSlice";
+import { FilterStateType } from "@/redux/features/filterProduct/filterSlice";
+
+function filterProducts(
+  products: ProductState["products"],
+  filters: FilterStateType
+): ProductState["products"] {
+  return products.filter((product) => {
+    if (!filters.categories.includes(product.category)) {
+      return false;
+    }
+    if (
+      !(filters.price.range[0] <= product.price) ||
+      !(product.price <= filters.price.range[1])
+    ) {
+      return false;
+    }
+    if (
+      !(filters.rating.range[0] <= Number(product.rating.toFixed(0))) ||
+      !(Number(product.rating.toFixed(0)) <= filters.rating.range[1])
+    ) {
+      return false;
+    }
+    if (
+      !(
+        filters.discount.range[0] <=
+        Number(product.discountPercentage.toFixed(0))
+      ) ||
+      !(
+        Number(product.discountPercentage.toFixed(0)) <=
+        filters.discount.range[1]
+      )
+    ) {
+      return false;
+    }
+    return true;
+  });
+}
 function ImageCardList() {
   const [show, setShow] = useState(true);
+
   const [count, setCount] = useState(0);
   const dispatch = useDispatch();
-  const { products } = useSelector((state) => state.productsArray);
+  const { products } = useSelector(
+    (state) =>
+      // filterProducts(state.productsArray.products, state.filters)
+      state.productsArray
+  );
 
+  const { categories, price, rating, discount } = useSelector(
+    (state) => state.filters
+  );
+  const filteredItems = filterProducts(products, {
+    categories,
+    price,
+    rating,
+    discount,
+  });
   // const [data, setData] = useState<ImageDataType>([]);
   // const fetchUser = async () => {
   //   try {
@@ -38,16 +90,17 @@ function ImageCardList() {
 
   useEffect(() => {
     dispatch(getProducts(count));
-  }, [count]);
+    setCount(count + 1);
+  }, []);
   useEffect(() => {
-    if (products.length > count * 10) {
+    if (products.length === count * 10) {
       setShow(false);
     }
   }, [products]);
 
   return (
-    <div className="grid relative pb-20  scrollbar-none grid-cols-1 md:grid-cols-4 lg:grid-cols-10 place-content-center py-10  items-center  lg:overflow-y-scroll    gap-4 2xl:grid-cols-12">
-      {products?.map((item) => {
+    <div className="grid relative pb-20  scrollbar-none grid-cols-1 md:grid-cols-4 lg:grid-cols-10 place-content-center py-10  items-center     gap-4 2xl:grid-cols-12">
+      {filteredItems?.map((item) => {
         return (
           <ImageCard
             key={`${item.thumbnail}`}
@@ -58,6 +111,7 @@ function ImageCardList() {
             brand={item.brand}
             title={item.title}
             rating={item.rating}
+            discountPercentage={item.discountPercentage}
           />
         );
       })}
