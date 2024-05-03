@@ -7,17 +7,12 @@ import Footer from "@/components/Footer";
 import ContactUs from "@/components/Contact";
 export default function Home() {
   return (
-    <div
-      className={`${poppins.className} bg-radial-gradient min-h-screen w-full`}
-    >
+    <div className={`${poppins.className}  min-h-screen w-full`}>
       <Header></Header>
       <main>
         <Hero />
-        <hr className="bg-slate-900 md:max-w-4xl w-2/3 my-6 mx-auto" />
         <Skills />
-        <hr className="bg-slate-900 md:max-w-4xl w-2/3 my-6 mx-auto" />
         <Mentor />
-        <hr className="bg-slate-900 md:max-w-4xl w-2/3 my-6 mx-auto" />
         <ContactUs />
       </main>
       <Footer />
