@@ -17,6 +17,7 @@ import {
   NavigationMenuTrigger,
   navigationMenuTriggerStyle,
 } from "@/components/ui/navigation-menu";
+import { GlowingStarsBackgroundCard } from "./ui/glowing-stars";
 function Header() {
   useEffect(() => {
     var prevScrollpos = window.scrollY;
@@ -33,7 +34,11 @@ function Header() {
   return (
     <header
       id="navbar"
-      className="w-full z-[100] py-4  px-1 sm:px-4 l flex transition-all delay-500 bg-simple-gradient justify-between top-0 items-center fixed bg-transparent border-b border-[#28061F]  text-white"
+      className="w-full z-[100] py-4 px-1 sm:px-4 flex transition-all delay-500 justify-between top-0 items-center fixed border-b border-[#28061F] text-white"
+      style={{
+        backgroundColor: "rgba(0, 0, 0, 0.5)",
+        backdropFilter: "blur(10px)",
+      }}
     >
       <BrandLogo />
       <nav className="text-sm  md:flex lg:gap-8  gap-4 hidden  text-white ">
@@ -105,8 +110,8 @@ export function NavigationMenuDemo() {
           <NavigationMenuTrigger className="bg-transparent">
             Projects
           </NavigationMenuTrigger>
-          <NavigationMenuContent className="p-1 w-48">
-            <ul className="grid gap-3  md:w-[400px] lg:w-[500px] lg:grid-cols-[.75fr_1fr]">
+          <NavigationMenuContent className="p-1 w-48 ">
+            <ul className="grid gap-3   md:w-[200px] lg:w-[200px] lg:grid-cols-[1fr]">
               <ListItem href="/products" title="products">
                 Product cart project with context api
               </ListItem>
@@ -121,7 +126,7 @@ export function NavigationMenuDemo() {
             Components
           </NavigationMenuTrigger>
           <NavigationMenuContent className="p-1 w-48">
-            <ul className="grid w-[400px] gap-3  md:w-[500px] md:grid-cols-2 lg:w-[600px] ">
+            <ul className="grid w-[200px] gap-3  md:w-[200px] md:grid-cols-1 lg:w-[200px] ">
               {components.map((component) => (
                 <ListItem
                   key={component.title}
