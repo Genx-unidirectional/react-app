@@ -7,6 +7,7 @@ import SearchAutoComplete from "@/components/mini/SearchAutoComplete";
 import StarRating from "@/components/mini/StarRating";
 import Tabs from "@/components/mini/Tabs";
 import TicTacToe from "@/components/mini/TicTacToe";
+import TypeEffect from "@/components/mini/TypeEffect";
 import ControlledForm from "@/components/mini/forms/ControlledForm";
 import ReactHookForm from "@/components/mini/forms/ReactHookForm";
 import SimpleForm from "@/components/mini/forms/SimpleForm";
@@ -25,6 +26,7 @@ function page() {
     <ImageSlider />,
     <GithubUser />,
     <StarRating />,
+    <TypeEffect />,
   ];
   return (
     <div className="mt-[56.8px] text-white">
