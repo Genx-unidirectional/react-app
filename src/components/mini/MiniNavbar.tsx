@@ -1,7 +1,4 @@
 "use client";
-import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
-import { Label } from "@/components/ui/label";
 import { MINI_PROJECTS_ARR } from "@/config/mini";
 import { ChevronRight, SquareGanttChart } from "lucide-react";
 import {
@@ -9,14 +6,12 @@ import {
   SheetClose,
   SheetContent,
   SheetDescription,
-  SheetFooter,
   SheetHeader,
   SheetTitle,
   SheetTrigger,
 } from "@/components/ui/sheet";
 import BrandLogo from "../Brand-logo";
 import { cn } from "@/lib/utils";
-import { useState } from "react";
 import Link from "next/link";
 
 export function MiniNavbar() {
@@ -40,7 +35,7 @@ export function MiniNavbar() {
                 return (
                   <SheetClose key={idx} asChild>
                     <Link
-                      className="text-blue-500 items-center flex text-xl"
+                      className={cn("text-blue-500 items-center flex text-xl")}
                       href={`#${idx.toString()}`}
                     >
                       {name}
