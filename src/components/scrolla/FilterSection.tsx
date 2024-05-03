@@ -89,7 +89,10 @@ function FilterSection() {
                       checked={categories.includes(item.value)}
                       onChange={() => dispatch(setCategories(item.value))}
                     />
-                    <Label className="md:text-xl" id={`${item.value}${idx}`}>
+                    <Label
+                      className="md:text-xl"
+                      htmlFor={`${item.value}${idx}`}
+                    >
                       {item.label}
                     </Label>
                   </li>
