@@ -15,7 +15,7 @@ function ContactUs() {
   return (
     <section
       id="contact"
-      className="h-screen w-full scroll-mt-12  bg-pink-900 py-12 pt-36 relative"
+      className="h-screen w-full   bg-pink-900 py-12 pt-36 relative"
     >
       {" "}
       {/* Ensure the container is relative */}
