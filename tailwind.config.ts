@@ -31,6 +31,13 @@ const config = {
       },
     },
     extend: {
+      dropShadow: {
+        glow: [
+          "0 0px 20px rgba(255,255, 255, 0.35)",
+          "0 0px 65px rgba(255, 255,255, 0.2)",
+        ],
+      },
+
       screens: {
         csm: { max: "769px" },
         xsm: { max: "500px" },
@@ -85,6 +92,16 @@ const config = {
             backgroundPosition: "-200% 0",
           },
         },
+        spotlight: {
+          "0%": {
+            opacity: "0",
+            transform: "translate(-72%, -62%) scale(0.5)",
+          },
+          "100%": {
+            opacity: "1",
+            transform: "translate(-50%,-40%) scale(1)",
+          },
+        },
         "accordion-down": {
           from: { height: "0" },
           to: { height: "var(--radix-accordion-content-height)" },
@@ -126,6 +143,7 @@ const config = {
         "animate-color": "animate-color 2s ease-out infinite",
         scroll:
           "scroll var(--animation-duration, 40s) var(--animation-direction, forwards) linear infinite",
+        spotlight: "spotlight 2s ease .75s 1 forwards",
       },
     },
   },
