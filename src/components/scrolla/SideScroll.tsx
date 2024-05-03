@@ -72,7 +72,10 @@ function SideScroll() {
                         checked={categories.includes(item.value)}
                         onChange={() => dispatch(setCategories(item.value))}
                       />
-                      <Label className="text-md" id={`${item.value}${idx}`}>
+                      <Label
+                        className="text-md"
+                        htmlFor={`${item.value}${idx}`}
+                      >
                         {item.label}
                       </Label>
                     </li>
@@ -88,7 +91,7 @@ function SideScroll() {
               className="mb-2  leading-6 font-medium text-xl  
              "
             >
-              Select price
+              Select Price
             </Label>
             <div className="w-full flex flex-col gap-1">
               <div className="flex font-medium justify-between w-full">
@@ -128,7 +131,7 @@ function SideScroll() {
               className="mb-2  leading-6 font-medium text-xl  
              "
             >
-              Select rating
+              Select Rating
             </Label>
             <div className="w-full flex  gap-1 flex-col">
               <div className="flex font-medium justify-between w-full">
@@ -152,7 +155,7 @@ function SideScroll() {
                 className="mb-2  leading-6 font-medium text-xl  
              "
               >
-                Select rating
+                Select Discount
               </Label>
               <div className="w-full flex  gap-1 flex-col">
                 <div className="flex font-medium justify-between w-full">
