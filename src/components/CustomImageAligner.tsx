@@ -6,18 +6,18 @@ type Props = {
   className?: string;
   aspectRatio?: number;
 };
-export function AspectRatioDemo({
+export default function CustomImageAligner({
   url,
   className,
   alt,
   aspectRatio = 16 / 9,
 }: Props) {
   return (
-    <AspectRatio ratio={aspectRatio} className={cn("bg-muted", className)}>
+    <AspectRatio ratio={aspectRatio} className="bg-muted">
       <img
         src={url}
         alt="Photo by Drew Beamer"
-        className="rounded-md h-full w-full object-cover"
+        className={cn("rounded-md h-full w-full object-cover", className)}
       />
     </AspectRatio>
   );
