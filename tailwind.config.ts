@@ -42,6 +42,7 @@ const config = {
         csm: { max: "769px" },
         xsm: { max: "500px" },
         fxl: { min: "1024px" },
+        mxl: { min: "768px" },
       },
       colors: {
         border: "hsl(var(--border))",

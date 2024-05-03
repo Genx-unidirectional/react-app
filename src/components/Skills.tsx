@@ -13,7 +13,7 @@ function Skills() {
       />
       <section
         id="skill"
-        className="flex mx-auto relative  text-white max-w-4xl flex-col lg:h-screen items-center  gap-10  pt-20  px-3 sm:px-4 md:px-6  "
+        className="flex mx-auto relative  text-white max-w-4xl flex-col lg:h-screen items-center  gap-10  pb-4 pt-20  px-3 sm:px-4 md:px-6  "
       >
         <h2 className="text-4xl text-center md:text-5xl bg-gradient-to-b from-white to-gray-500 text-transparent bg-clip-text font-bold">
           Skills and Capabilities

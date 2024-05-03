@@ -56,6 +56,12 @@ function Header() {
         </Link>
         <Link
           className="hover:text-slate-300 transition-all delay-150"
+          href={"#projects"}
+        >
+          Projects
+        </Link>
+        <Link
+          className="hover:text-slate-300 transition-all delay-150"
           href={"#mentor"}
         >
           Mentor
@@ -96,6 +102,9 @@ export function NavigationMenuDemo() {
               </ListItem>
               <ListItem href="#skill" title="skill">
                 About my skills
+              </ListItem>
+              <ListItem href="#projects" title="projects">
+                Projects
               </ListItem>
               <ListItem href="#mentor" title="mentor">
                 About mentor
