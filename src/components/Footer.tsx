@@ -30,6 +30,9 @@ function Footer() {
             <Link className="hover:text-white" href={"#skill"}>
               Skills
             </Link>
+            <Link className="hover:text-white" href={"#projects"}>
+              Projects
+            </Link>
             <Link className="hover:text-white" href={"#mentor"}>
               Mentor
             </Link>
