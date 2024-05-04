@@ -3,6 +3,7 @@ import { motion } from "framer-motion";
 import { LampContainer } from "./ui/lamp";
 import { inter } from "./font";
 import { cn } from "@/lib/utils";
+import Link from "next/link";
 function Projects() {
   return (
     <div
@@ -20,7 +21,7 @@ function Projects() {
           }}
           className="mt-2 bg-gradient-to-br absolute from-slate-300 flex flex-col overflow-visible md:flex-row gap-4  to-slate-500 py-4 bg-clip-text text-center text-4xl font-medium tracking-tight text-transparent md:text-7xl"
         >
-          <article className=" w-[300px]  border-2 drop-shadow-glow border-cyan-500  bg-black overflow-hidden flex flex-col  text-black   rounded-lg">
+          <article className=" w-[300px]  border-2 drop-shadow-glow hover:scale-105 transition-all duration-300 border-cyan-500  bg-black overflow-hidden flex flex-col  text-black   rounded-lg">
             <img
               src="/images/scroll.jpg"
               alt="scroll image"
@@ -32,7 +33,9 @@ function Projects() {
                 inter.className
               )}
             >
-              <h3 className="text-2xl mb-2">Scrolla Project</h3>
+              <h3 className="text-2xl mb-2 bg-gradient-to-r from-[#D4145A] underline animate-bounce to-[#FBB03B] bg-clip-text text-transparent font-bold">
+                <Link href={"/scrolla"}>Scrolla Project</Link>
+              </h3>
               <p
                 className={cn(
                   "text-sm mb-1 text-left text-slate-400 tracking-wide",
@@ -53,10 +56,10 @@ function Projects() {
               </p>
             </div>
           </article>
-          <article className=" w-[300px] mxl:  border-2 drop-shadow-glow border-cyan-500  bg-black overflow-hidden flex flex-col  text-black   rounded-lg">
+          <article className=" w-[300px] mxl:  border-2 drop-shadow-glow border-cyan-500 hover:scale-105 transition-all duration-300 bg-black overflow-hidden flex flex-col  text-black   rounded-lg">
             {" "}
             <img
-              src="/images/scroll.jpg"
+              src="/images/dashboard.jpg"
               alt=""
               className="w-full object-cover h-full"
             />
@@ -66,15 +69,17 @@ function Projects() {
                 inter.className
               )}
             >
-              <h3 className="text-2xl mb-2">DashCraft Project</h3>
+              <h3 className="text-2xl mb-2 bg-gradient-to-r from-[#D4145A] underline animate-bounce to-[#FBB03B] bg-clip-text text-transparent font-bold">
+                <Link href={"/dashcraft"}>DashCraft Project</Link>
+              </h3>
+
               <p
                 className={cn(
                   "text-sm mb-1 text-left text-slate-400 tracking-wide",
                   inter.className
                 )}
               >
-                Using rate limited api for data and redux/toolkit to manage
-                state
+                using next js power to increase performance of ui and SSR
               </p>
               <p
                 className={cn(
@@ -82,8 +87,7 @@ function Projects() {
                   inter.className
                 )}
               >
-                The products get's filtered based on filtering state stored in
-                redux
+                Using next js authentication to secure webapp
               </p>
             </div>
           </article>
