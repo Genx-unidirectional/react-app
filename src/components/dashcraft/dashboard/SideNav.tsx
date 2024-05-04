@@ -1,13 +1,23 @@
-import BrandLogo from "../../Brand-logo";
-import { ModeToggle } from "../../ModeToggle";
-function SideNav() {
+import Link from "next/link";
+import NavLinks from "@/components/dashcraft/dashboard/Nav-links";
+import BrandLogo from "@/components/Brand-logo";
+import { PowerIcon } from "lucide-react";
+export default function SideNav() {
   return (
-    <div className="py-2 px-2 border-b border-slate-400">
-      <div className="w-full  items-center h-10 bg- flex justify-between bg-background text-foreground ">
-        <BrandLogo />
-        <ModeToggle />
+    <div className="flex h-full flex-col px-3 py-4 md:px-2">
+      <div className="mb-2 flex h-20 items-end justify-start rounded-md bg-black p-4 ">
+        <BrandLogo className="w-32 text-white md:w-40" />
+      </div>
+      <div className="flex grow flex-row justify-between space-x-2 md:flex-col md:space-x-0 md:space-y-2">
+        <NavLinks />
+        <div className="hidden h-auto w-full grow rounded-md bg-gray-50 md:block"></div>
+        <form>
+          <button className="flex h-[48px] w-full grow items-center justify-center gap-2 rounded-md bg-gray-50 p-3 text-sm font-medium hover:bg-sky-100 hover:text-blue-600 md:flex-none md:justify-start md:p-2 md:px-3">
+            <PowerIcon className="w-6" />
+            <div className="hidden md:block">Sign Out</div>
+          </button>
+        </form>
       </div>
     </div>
   );
 }
-export default SideNav;
