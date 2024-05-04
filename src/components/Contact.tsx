@@ -2,14 +2,17 @@
 
 import React, { FormEvent, useState } from "react";
 import { BackgroundBeams } from "@/components/ui/background-beams";
-
+import toast from "react-hot-toast";
 function ContactUs() {
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
 
   const handleSubmit = (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault();
-    console.log("Submitted:", { email, message });
+
+    toast.success("Your response recorded");
+    setEmail("");
+    setMessage("");
   };
 
   return (
@@ -30,9 +33,8 @@ function ContactUs() {
         </h1>
         <p className="text-neutral-500 max-w-lg mx-auto my-2 text-sm text-center">
           Website tailored to your business needs! feel free to contact us and
-          let us know what startup business ideal your mind is on working. Our
-          website is going to be encourage and propel to your business
-          strategies.
+          let us know, What startup business ideas your mind is working on. Our
+          website is the one who propel your business strategies.
         </p>
         <form onSubmit={handleSubmit} className="space-y-4 mt-4">
           <input
