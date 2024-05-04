@@ -1,17 +1,12 @@
-import SideNav from "@/components/dashboard/SideNav";
-import { ThemeProvider } from "@/components/theme-provider";
-import React from "react";
+import SideNav from "@/components/dashcraft/dashboard/Nav-links";
 
-function Layout({ children }: { children: React.ReactNode }) {
+export default function Layout({ children }: { children: React.ReactNode }) {
   return (
-    <div className="md:flex-row   flex flex-col min-h-screen md:overflow-hidden">
-      <ThemeProvider attribute="class" defaultTheme="system">
-        <div className="w-full md:w-64 ">
-          <SideNav />
-        </div>
-        <div className=" md:flex-grow">{children}</div>
-      </ThemeProvider>
+    <div className="flex h-screen flex-col md:flex-row md:overflow-hidden">
+      <div className="w-full flex-none md:w-64">
+        <SideNav />
+      </div>
+      <div className="flex-grow p-6 md:overflow-y-auto md:p-12">{children}</div>
     </div>
   );
 }
-export default Layout;
