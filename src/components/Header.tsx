@@ -17,11 +17,10 @@ import {
   NavigationMenuTrigger,
   navigationMenuTriggerStyle,
 } from "@/components/ui/navigation-menu";
-import { GlowingStarsBackgroundCard } from "./ui/glowing-stars";
 function Header() {
   useEffect(() => {
     var prevScrollpos = window.scrollY;
-    window.onscroll = function () {
+    const navUpDown = () => {
       var currentScrollPos = window.scrollY;
       if (prevScrollpos > currentScrollPos) {
         document.getElementById("navbar")!.style.top = "0";
@@ -29,6 +28,10 @@ function Header() {
         document.getElementById("navbar")!.style.top = "-72.8px";
       }
       prevScrollpos = currentScrollPos;
+    };
+    window.addEventListener("scroll", navUpDown);
+    return () => {
+      window.removeEventListener("scroll", navUpDown);
     };
   }, []);
   return (
