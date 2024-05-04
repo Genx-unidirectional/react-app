@@ -130,6 +130,9 @@ export function NavigationMenuDemo() {
               <ListItem href="/scrolla" title="scrolla">
                 Scrollable products with rate limited api data
               </ListItem>
+              <ListItem href="/dashcraft" title="dashcraft">
+                Dashcraft project with nextjs features
+              </ListItem>
             </ul>
           </NavigationMenuContent>
         </NavigationMenuItem>
