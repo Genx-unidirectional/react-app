@@ -33,7 +33,7 @@ function page() {
       {componentArr.map((component, idx) => {
         return (
           <div
-            key={`miniproject` + idx}
+            key={`miniproject-${idx}`}
             id={idx.toString()}
             className="h-screen flex justify-center items-center w-full"
           >
