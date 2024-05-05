@@ -66,7 +66,7 @@ function ImageSlider() {
           console.log(item.url);
           return (
             <img
-              className="w-full"
+              className="w-full h-full object-cover"
               key={item.id}
               src={item.download_url}
               alt="image"
