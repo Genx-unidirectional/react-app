@@ -12,8 +12,8 @@ function BrandLogo({ className }: Props) {
   return (
     <div className={cn(lusitana.className, "flex items-center ", className)}>
       <Link href={"/"} className="flex items-center">
-        <AtomIcon className="w-10 h-10" />
-        <p className="text-3xl font-bold ">Gex</p>
+        <AtomIcon className="sm:w-10 sm:h-10 h-7 w-7" />
+        <p className="sm:text-3xl text-xl font-bold ">Gex</p>
       </Link>
     </div>
   );
