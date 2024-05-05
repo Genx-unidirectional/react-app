@@ -1,3 +1,4 @@
+"use client";
 import { lusitana } from "@/components/font";
 
 import { ArrowRightIcon, AtSign, KeyRound, CircleAlert } from "lucide-react";
