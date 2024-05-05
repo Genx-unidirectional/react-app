@@ -45,6 +45,16 @@
   const useDispatch  = ()=>useDispatch<AppDispatch>();
   ```
 
+# 🍬 Dashcraft Project
+
+- [Next.js](https://nextjs.org)
+- [React.js](https://reactjs.org)
+- [Tailwind CSS](https://tailwindcss.com)
+- [Shadcn](https://ui.shadcn.com/)
+- [NextAuth](https://next-auth.js.org/)
+
+### Build with
+
 # 🍬 Mini Projects
 
 ### 1 Simple form
