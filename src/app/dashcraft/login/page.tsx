@@ -1,3 +1,5 @@
+"use client";
+
 import BrandLogo from "@/components/Brand-logo";
 import LoginForm from "@/components/dashcraft/login-form";
 
