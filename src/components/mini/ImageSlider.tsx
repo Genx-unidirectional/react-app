@@ -58,7 +58,7 @@ function ImageSlider() {
   };
   return (
     <Wrapper className="relative  rounded-lg overflow-hidden">
-      <div className="w-full bg-black h-[265.14px] rounded-lg ">
+      <div className="w-full bg-black overflow-hidden h-[265.14px] rounded-lg ">
         {data.map((item) => {
           if (Number(item.id) !== index) {
             return;
