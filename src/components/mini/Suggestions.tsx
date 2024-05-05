@@ -16,9 +16,10 @@ function Suggestions({ query, handleSuggestions }: Props) {
           loading
         </p>
       ) : (
-        filteredData.map((item) => {
+        filteredData.map((item, idx) => {
           return (
             <li
+              key={`filter${idx}`}
               onClick={(e) => handleSuggestions(item.title)}
               className="w-full hover:bg-slate-300 text-slate-800 text-left cursor-pointer rounded-lg p-2"
             >
