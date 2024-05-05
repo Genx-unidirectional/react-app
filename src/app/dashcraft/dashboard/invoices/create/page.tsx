@@ -3,21 +3,21 @@ import Breadcrumbs from "@/components/dashcraft/invoices/breadcrumbs";
 import { fetchCustomers } from "@/lib/data";
 
 export default async function Page() {
-  // const customers = await fetchCustomers();
+  const customers = await fetchCustomers();
 
   return (
     <main>
-      {/* <Breadcrumbs
+      <Breadcrumbs
         breadcrumbs={[
-          { label: "Invoices", href: "/dashboard/invoices" },
+          { label: "Invoices", href: "/dashcraft/dashboard/invoices" },
           {
             label: "Create Invoice",
-            href: "/dashboard/invoices/create",
+            href: "/dashcraft/dashboard/invoices/create",
             active: true,
           },
         ]}
       />
-      <Form customers={customers} /> */}
+      <Form customers={customers} />
     </main>
   );
 }
