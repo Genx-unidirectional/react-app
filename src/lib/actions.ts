@@ -47,6 +47,6 @@ export async function updateInvoice(id: string, formData: FormData) {
     WHERE id = ${id}
   `;
 
-  revalidatePath("/dashboard/invoices");
-  redirect("/dashboard/invoices");
+  revalidatePath("/dashcraft/dashboard/invoices");
+  redirect("/dashcraft/dashboard/invoices");
 }
