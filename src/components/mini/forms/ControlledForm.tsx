@@ -32,7 +32,7 @@ function ControlledForm() {
         "w-1/2 rounded-lg p-2 border border-white bg-purple-600 text-white lg:2/5 flex flex-col items-start justify-center ",
         poppins.className
       )}
-      action="./"
+      action=""
     >
       <label className="text-2xl font-medium " htmlFor="controlName">
         Name :
