@@ -1,4 +1,5 @@
 "use client";
+import { ArrowLeft } from "lucide-react";
 import { motion } from "framer-motion";
 import { LampContainer } from "./ui/lamp";
 import { inter } from "./font";
@@ -33,9 +34,15 @@ function Projects() {
                 inter.className
               )}
             >
-              <h3 className="text-2xl mb-2 bg-gradient-to-r from-[#D4145A] underline animate-bounce to-[#FBB03B] bg-clip-text text-transparent font-bold">
-                <Link href={"/scrolla"}>Scrolla Project</Link>
-              </h3>
+              <div className="w-full flex justify-start gap-2 items-start">
+                <h3 className="text-2xl mb-2 bg-gradient-to-r from-[#D4145A] underline animate-bounce to-[#FBB03B] bg-clip-text text-transparent font-bold">
+                  <Link href={"/scrolla"}>Scrolla Project</Link>
+                </h3>
+                <p className=" text-lg tracking-wide flex justify-center items-center text-white">
+                  <ArrowLeft /> Click
+                </p>
+              </div>
+
               <p
                 className={cn(
                   "text-sm mb-1 text-left text-slate-400 tracking-wide",
@@ -69,9 +76,14 @@ function Projects() {
                 inter.className
               )}
             >
-              <h3 className="text-2xl mb-2 bg-gradient-to-r from-[#D4145A] underline animate-bounce to-[#FBB03B] bg-clip-text text-transparent font-bold">
-                <Link href={"/dashcraft"}>DashCraft Project</Link>
-              </h3>
+              <div className="w-full flex justify-start gap-2 items-start">
+                <h3 className="text-2xl mb-2 bg-gradient-to-r from-[#D4145A] underline animate-bounce to-[#FBB03B] bg-clip-text text-transparent font-bold">
+                  <Link href={"/dashcraft"}>DashCraft Project</Link>
+                </h3>
+                <p className=" text-lg tracking-wide flex justify-center items-center text-white">
+                  <ArrowLeft /> Click
+                </p>
+              </div>
 
               <p
                 className={cn(
