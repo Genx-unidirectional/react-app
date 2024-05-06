@@ -15,7 +15,7 @@ const links = [
   },
   {
     name: "Customers",
-    href: "/dashcraft/dashboard/customers",
+    href: "/dashcraft/dashboard/customer",
     icon: UserRound,
   },
 ];
