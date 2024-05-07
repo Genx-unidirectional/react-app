@@ -120,3 +120,9 @@ Form made with useState having object as a state and input field are controlled 
 
 - Here the star rating made in this code the most important thing is conditioning the number in order to set the background color for stars
 - using two useState and using short circuiting to giving background color.
+
+### 11 Auto Text
+
+- The promise based delay in add text and remove text function is made
+- The loop through the sentences array in order to display them in the screen one by one with loop
+- Using use effect and return the cleaning function such that function continuously getting called would removed when page changes.
