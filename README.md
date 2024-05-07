@@ -50,8 +50,19 @@
 - [Next.js](https://nextjs.org)
 - [React.js](https://reactjs.org)
 - [Tailwind CSS](https://tailwindcss.com)
-- [Shadcn](https://ui.shadcn.com/)
 - [NextAuth](https://next-auth.js.org/)
+
+### Description
+
+- Making dashboard based on recent revenue and paid and unpaid invoices
+- We can create new invoices and edit existing invoices and delete them al is done using next js server actions
+- We authenticate the user also based on email and password
+
+### Further improvement
+
+- There are lot's of improvements we need to run through
+- Customer page is on of them for now customer page is not working but it will stay tuned
+- Error handing in server actions
 
 ### Build with
 
