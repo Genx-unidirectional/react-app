@@ -12,4 +12,5 @@ export const MINI_PROJECTS_ARR = [
   "Star-Rating",
   "Type-Effect",
   "Tab-Transition",
+  "Image-Scroll",
 ];
