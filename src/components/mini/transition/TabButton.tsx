@@ -15,7 +15,7 @@ function TabButton({ isActive, setTab, tab }: Props) {
         "p-2 text-white border rounded-lg border-white bg-black font-medium text-lg",
         {
           "border border-black bg-white  text-black": isActive,
-          "opacity-65": isPending,
+          "opacity-65 animate-pulse": isPending,
         }
       )}
       onClick={() =>
