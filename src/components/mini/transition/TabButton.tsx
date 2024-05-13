@@ -1,21 +1,28 @@
 import { cn } from "@/lib/utils";
+import { Dispatch, SetStateAction, useTransition } from "react";
 
 type Props = {
   isActive: boolean;
-  selectTab: (nextTab: string) => void;
+  setTab: Dispatch<SetStateAction<string>>;
   tab: string;
 };
 
-function TabButton({ isActive, selectTab, tab }: Props) {
+function TabButton({ isActive, setTab, tab }: Props) {
+  const [isPending, startTransition] = useTransition();
   return (
     <button
       className={cn(
         "p-2 text-white border rounded-lg border-white bg-black font-medium text-lg",
         {
           "border border-black bg-white  text-black": isActive,
+          "opacity-65": isPending,
         }
       )}
-      onClick={() => selectTab(tab)}
+      onClick={() =>
+        startTransition(() => {
+          setTab(tab);
+        })
+      }
     >
       {tab}
     </button>
