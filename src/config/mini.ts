@@ -11,4 +11,5 @@ export const MINI_PROJECTS_ARR = [
   "Github-User",
   "Star-Rating",
   "Type-Effect",
+  "Tab-Transition",
 ];
