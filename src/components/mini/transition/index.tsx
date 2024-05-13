@@ -1,4 +1,4 @@
-import { useState, useTransition } from "react";
+import { useState } from "react";
 import Wrapper from "../Wrapper";
 import AboutTab from "./AboutTab";
 import PostsTab from "./PostsTab";
@@ -21,12 +21,6 @@ const TABS: { tab: string; component: JSX.Element }[] = [
 ];
 function TabTransition() {
   const [tab, setTab] = useState<string>("About");
-  const [isPending, startTransition] = useTransition();
-  const selectTab = (nextTab: string) => {
-    startTransition(() => {
-      setTab(nextTab);
-    });
-  };
   return (
     <Wrapper className="h-[400px] overflow-hidden">
       <div className=" w-full flex justify-evenly">
@@ -35,7 +29,7 @@ function TabTransition() {
             <TabButton
               key={`${item.tab}mini12`}
               isActive={tab === item.tab}
-              selectTab={selectTab}
+              setTab={setTab}
               tab={item.tab}
             />
           );
