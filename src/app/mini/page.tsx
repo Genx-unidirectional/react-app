@@ -12,7 +12,7 @@ import ControlledForm from "@/components/mini/forms/ControlledForm";
 import ReactHookForm from "@/components/mini/forms/ReactHookForm";
 import SimpleForm from "@/components/mini/forms/SimpleForm";
 import { ReactElement } from "react";
-
+import TabTransition from "@/components/mini/transition";
 function page() {
   const componentArr: ReactElement[] = [
     <SimpleForm />,
@@ -27,6 +27,7 @@ function page() {
     <GithubUser />,
     <StarRating />,
     <TypeEffect />,
+    <TabTransition />,
   ];
   return (
     <div className="mt-[56.8px] text-white">
