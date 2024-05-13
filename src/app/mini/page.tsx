@@ -13,6 +13,7 @@ import ReactHookForm from "@/components/mini/forms/ReactHookForm";
 import SimpleForm from "@/components/mini/forms/SimpleForm";
 import { ReactElement } from "react";
 import TabTransition from "@/components/mini/transition";
+import ScrollImage from "@/components/mini/refs/ScrollImage";
 function page() {
   const componentArr: ReactElement[] = [
     <SimpleForm />,
@@ -28,6 +29,7 @@ function page() {
     <StarRating />,
     <TypeEffect />,
     <TabTransition />,
+    <ScrollImage />,
   ];
   return (
     <div className="mt-[56.8px] text-white">
