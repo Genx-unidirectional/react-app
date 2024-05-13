@@ -36,7 +36,7 @@ function TabTransition() {
         })}
       </div>
       <div className="flex-grow h-full overflow-hidden  overflow-y-scroll p-4">
-        {TABS.map((item, idx) => {
+        {TABS.map((item) => {
           if (item.tab === tab) {
             return item.component;
           }
