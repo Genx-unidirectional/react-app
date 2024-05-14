@@ -13,4 +13,5 @@ export const MINI_PROJECTS_ARR = [
   "Type-Effect",
   "Tab-Transition",
   "Image-Scroll",
+  "Controlled-Ref",
 ];
