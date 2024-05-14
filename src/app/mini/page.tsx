@@ -14,6 +14,7 @@ import SimpleForm from "@/components/mini/forms/SimpleForm";
 import { ReactElement } from "react";
 import TabTransition from "@/components/mini/transition";
 import ScrollImage from "@/components/mini/refs/ScrollImage";
+import RefWithImperative from "@/components/mini/ForwardImperative";
 function page() {
   const componentArr: ReactElement[] = [
     <SimpleForm />,
@@ -30,6 +31,7 @@ function page() {
     <TypeEffect />,
     <TabTransition />,
     <ScrollImage />,
+    <RefWithImperative />,
   ];
   return (
     <div className="mt-[56.8px] text-white">
