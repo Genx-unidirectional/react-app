@@ -14,4 +14,51 @@ export const MINI_PROJECTS_ARR = [
   "Tab-Transition",
   "Image-Scroll",
   "Controlled-Ref",
+  "Recursive-Tree",
+];
+
+export type TreeDataType = {
+  name: string;
+  childrens?: TreeDataType[];
+};
+
+export const TREEDATA: TreeDataType[] = [
+  {
+    name: "Home",
+  },
+  {
+    name: "products",
+    childrens: [
+      {
+        name: "AZF-12",
+        childrens: [
+          {
+            name: "Model-e",
+          },
+        ],
+      },
+      {
+        name: "FZRT-22",
+        childrens: [
+          {
+            name: "Model-1",
+          },
+          {
+            name: "Model-2",
+          },
+        ],
+      },
+    ],
+  },
+  {
+    name: "blog",
+    childrens: [
+      {
+        name: "Cars",
+      },
+      {
+        name: "engine",
+      },
+    ],
+  },
 ];
