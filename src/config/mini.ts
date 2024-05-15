@@ -15,7 +15,8 @@ export const MINI_PROJECTS_ARR = [
   "Image-Scroll",
   "Controlled-Ref",
   "Recursive-Tree",
-  "Scroll-Indicator"
+  "Scroll-Indicator",
+  "Sticky-Cursor",
 ];
 
 export type TreeDataType = {
