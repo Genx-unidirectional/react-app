@@ -18,6 +18,7 @@ import RefWithImperative from "@/components/mini/ForwardImperative";
 import TreeHolder from "@/components/mini/TreeHolder";
 import ScrollIndicator from "@/components/mini/ScrollIndicator";
 import StickyCursor from "@/components/mini/StickyCursor";
+import RandomEmoji from "@/components/mini/RandomEmoji";
 function page() {
   const componentArr: ReactElement[] = [
     <SimpleForm />,
@@ -38,6 +39,7 @@ function page() {
     <TreeHolder />,
     <ScrollIndicator />,
     <StickyCursor />,
+    <RandomEmoji />,
   ];
   return (
     <div className="mt-[56.8px] text-white">
