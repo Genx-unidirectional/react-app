@@ -15,6 +15,7 @@ import { ReactElement } from "react";
 import TabTransition from "@/components/mini/transition";
 import ScrollImage from "@/components/mini/refs/ScrollImage";
 import RefWithImperative from "@/components/mini/ForwardImperative";
+import TreeHolder from "@/components/mini/TreeHolder";
 function page() {
   const componentArr: ReactElement[] = [
     <SimpleForm />,
@@ -32,6 +33,7 @@ function page() {
     <TabTransition />,
     <ScrollImage />,
     <RefWithImperative />,
+    <TreeHolder />,
   ];
   return (
     <div className="mt-[56.8px] text-white">
