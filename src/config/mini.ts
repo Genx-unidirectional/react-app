@@ -17,6 +17,7 @@ export const MINI_PROJECTS_ARR = [
   "Recursive-Tree",
   "Scroll-Indicator",
   "Sticky-Cursor",
+  "Random-Emoji",
 ];
 
 export type TreeDataType = {
