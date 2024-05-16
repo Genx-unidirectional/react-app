@@ -20,6 +20,7 @@ import ScrollIndicator from "@/components/mini/ScrollIndicator";
 import StickyCursor from "@/components/mini/StickyCursor";
 import RandomEmoji from "@/components/mini/RandomEmoji";
 import LazyLoadImage from "@/components/mini/LazyLoadImage";
+import UploadFile from "@/components/mini/UploadFile";
 function page() {
   const componentArr: ReactElement[] = [
     <SimpleForm />,
@@ -42,6 +43,7 @@ function page() {
     <StickyCursor />,
     <RandomEmoji />,
     <LazyLoadImage />,
+    <UploadFile />,
   ];
   return (
     <div className="mt-[56.8px] text-white">
