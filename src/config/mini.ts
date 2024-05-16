@@ -18,6 +18,7 @@ export const MINI_PROJECTS_ARR = [
   "Scroll-Indicator",
   "Sticky-Cursor",
   "Random-Emoji",
+  "LazyLoading-Image",
 ];
 
 export type TreeDataType = {
