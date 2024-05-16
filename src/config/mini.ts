@@ -19,6 +19,7 @@ export const MINI_PROJECTS_ARR = [
   "Sticky-Cursor",
   "Random-Emoji",
   "LazyLoading-Image",
+  "Upload-File",
 ];
 
 export type TreeDataType = {
