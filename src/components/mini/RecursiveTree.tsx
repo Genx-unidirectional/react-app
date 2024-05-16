@@ -7,8 +7,14 @@ type Props = {
 function RecursiveTree({ options }: Props) {
   return (
     <ul className="ml-10">
-      {options.map((option) => {
-        return <TreeElement name={option.name} childrens={option.childrens} />;
+      {options.map((option, idx) => {
+        return (
+          <TreeElement
+            key={`${idx}recursivetree`}
+            name={option.name}
+            childrens={option.childrens}
+          />
+        );
       })}
     </ul>
   );
