@@ -19,6 +19,7 @@ import TreeHolder from "@/components/mini/TreeHolder";
 import ScrollIndicator from "@/components/mini/ScrollIndicator";
 import StickyCursor from "@/components/mini/StickyCursor";
 import RandomEmoji from "@/components/mini/RandomEmoji";
+import LazyLoadImage from "@/components/mini/LazyLoadImage";
 function page() {
   const componentArr: ReactElement[] = [
     <SimpleForm />,
@@ -40,6 +41,7 @@ function page() {
     <ScrollIndicator />,
     <StickyCursor />,
     <RandomEmoji />,
+    <LazyLoadImage />,
   ];
   return (
     <div className="mt-[56.8px] text-white">
